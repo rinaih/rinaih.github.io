@@ -1,0 +1,149 @@
+body{
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1480px;
+    font-family: 'Lora', serif;
+    font-size: 1.125em;
+    line-height: 1.5;
+    background-color: #FCFBFA;
+}
+
+body:not(header){
+    color: #1F1E1C;
+}
+
+figure{
+    margin: 0;
+}
+
+h1{
+    margin: 0;
+    font-style: normal;
+    font-size: 2.875em;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+}
+
+header{
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-weight: 500;
+    line-height: 150%;
+    border-bottom: 1px solid #1F1E1C;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.navigation a:hover{
+    background-color: blanchedalmond;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min-content, 50%));
+}
+
+.navigation{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin: 0px -15px;
+}
+
+.navigation a{
+    margin: 0px 15px ;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, max-content));
+    margin-left: 100px;
+    margin-right: 100px;
+    grid-auto-flow: dense;
+    row-gap: 50px;
+    column-gap: 70px;
+}
+
+figure.image-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+}
+
+figcaption.image-1{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    width: 100%;
+    justify-items: center;
+    column-gap: 50px;
+    margin-bottom: 50px;
+}
+
+figure img, .header img{
+    width: 100%;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0px 100px;
+    padding: 30px 0px;
+    border-top: 1px solid #1F1E1C;
+}
+
+@media (max-width: 1030px){
+    figcaption.image-1 span:first-child{
+        justify-self: start;
+    }
+    
+    figcaption.image-1 span:nth-child(2){
+        justify-self: start;
+    }
+    
+    figcaption.image-1 span:last-child{
+        justify-self: start;
+    }
+}
+
+@media (min-width: 1030px){  
+    .image-2, .image-3, .image-4{
+        grid-column: span 2;
+    }
+    .header{
+        grid-column: span 2;
+    }
+
+    figcaption.image-1{
+        justify-items: start;
+    } 
+    
+}
+
+@media (min-width: 1480px){
+    .header{
+        grid-column: span 3;
+    }
+    figcaption.image-1 span:first-child{
+        justify-self: end;
+    }
+    
+    figcaption.image-1 span:nth-child(2){
+        justify-self: stretch;
+        text-align: center;
+    }
+    
+    figcaption.image-1 span:last-child{
+        justify-self: start;
+    }
+}
+
+
+
